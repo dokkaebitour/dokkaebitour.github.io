@@ -1,29 +1,56 @@
 @charset "UTF-8";
 /* CSS Document */
 
-body{ -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-size: 16px;
-  background-color: #fff; font-family: 'Roboto', sans-serif; color: #8d9393;
-   line-height: 1.6; font-weight: 400;}
-h1,h2,h3,h4,h5,h6{font-family: 'Merriweather', serif; margin: 0; padding: 0; margin-bottom: 10px; 
- color: #333333; }
-h1 {font-size: 32px}
-h2 {font-size: 28px;}
-h3 {font-size: 20px; line-height: 20px;}
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+  background-color: #fff;
+  font-family: 'Pretendard Variable', 'Roboto', sans-serif;
+  color: #8d9393;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Pretendard Variable', 'Merriweather', serif;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+h1 { font-size: 32px; }
+h2 { font-size: 28px; }
+h3 { font-size: 20px; line-height: 20px; }
 h4 {}
-p {margin: 0 0 20px;}
-p:last-child{margin-bottom: 0px;}
-ul, ol {margin: 0; }  
-ul li, ol li {line-height: 1.9;}
-a {color: #8d9393; text-decoration: none; -webkit-transition: all 0.3s; -moz-transition: all 0.3s;
-  transition: all 0.3s;}
-a:focus, a:hover { text-decoration: none; color: #90d7d6;}
-strong{ font-weight: 600;}
-.listnone{list-style: none;}
-.lead{font-size: 27px;
-    line-height: 38px;
-    color: #484d55;}
-.italic{font-style: italic;}
-.small{font-size: 14px;}
+p { margin: 0 0 20px; }
+p:last-child { margin-bottom: 0px; }
+
+ul, ol { margin: 0; }  
+ul li, ol li { line-height: 1.9; }
+
+a {
+  color: #8d9393;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+a:focus, a:hover {
+  text-decoration: none;
+  color: #90d7d6;
+}
+
+strong { font-weight: 600; }
+.listnone { list-style: none; }
+.lead {
+  font-size: 27px;
+  line-height: 38px;
+  color: #484d55;
+}
+.italic { font-style: italic; }
+.small { font-size: 14px; }
   
 
 /*---------------- title class ------------*/
