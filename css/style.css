@@ -488,22 +488,29 @@ blockquote p{font-family: 'Merriweather', serif;}
 .leave-comments{}
 /********** Extra Plugin CSS - Back to top **********/
 
-.cd-top {display: inline-block; height: 40px; width: 40px; position: fixed; bottom: 40px; right: 10px;
-  overflow: hidden; text-indent: 100%; white-space: nowrap; background: rgba(144, 215, 214, 100) 
-  url(../images/cd-top-arrow.svg) no-repeat center 50%; visibility: hidden; opacity: 0; 
-  -webkit-transition: opacity .3s 0s, visibility 0s .3s; -moz-transition: opacity .3s 0s, visibility 0s .3s;
- transition: opacity .3s 0s, visibility 0s .3s;}
-.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
- -webkit-transition: opacity .3s 0s, visibility 0s 0s; -moz-transition: opacity .3s 0s, visibility 0s 0s;
- transition: opacity .3s 0s, visibility 0s 0s;}
-.cd-top.cd-is-visible { /* the button becomes visible */ visibility: visible; opacity: 1;}
-.cd-top.cd-fade-out {
-  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-  opacity: .5;}
-.no-touch .cd-top:hover {background-color: #38a0de; opacity: 1;}
+.cd-top {
+  position: fixed;
+  right: 10px;
+  width: 50px;
+  height: 50px; /* 버튼 하나 크기 */
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  z-index: 999999;
+}
 
+.cd-top:hover {
+  opacity: 1;
+}
 
-
+/* 세로 배치 */
+.btn1 { top: 210px;   background-image: url('../images/btn1.png'); }
+.btn2 { top: 270px;  background-image: url('../images/btn2.png'); } /* 320 + 20px 간격 */
+.btn3 { top: 330px;  background-image: url('../images/btn3.png'); }
+.btn4 { top: 390px; background-image: url('../images/btn4.png'); }
 
 /* service section */
 .service-block {position: relative;}
@@ -564,6 +571,8 @@ color: #90d7d6; }
 }
 /* Custom sizes (768px to 1024px) */
 
+
+
 @media screen and (max-width: 768px) { 
 .navbar-brand {float: none;}
 .childern {padding-left: 0px;}
@@ -571,3 +580,162 @@ color: #90d7d6; }
 .widget-tags a {padding: 7px 4px; font-size: 10px; line-height: 8px;}
 }
 
+/* === Hero YouTube Background === */
+.hero{
+  position:relative;
+  width:100%;
+  height:652px; /* 필요시 높이 조절 가능 */
+  overflow:hidden;
+  background:#000 url('images/cont.png') center/cover no-repeat; /* 로딩/에러 시 대체 이미지 */
+}
+
+/* 배경 영상 래퍼: 섹션 전체를 덮기 */
+.hero__video-wrap{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none; /* 배경이 클릭/스크롤을 가로채지 않게 */
+}
+
+/* 16:9 비율로 'cover'처럼 꽉 채우기 */
+.hero__video{
+  position:absolute;
+  top:50%; left:50%;
+  width:177.78vh;   /* 100vh * (16/9) */
+  height:100vh;
+  transform:translate(-50%,-50%);
+  min-width:100%;
+  min-height:100%;
+}
+
+/* 오버레이(텍스트/버튼)는 위로 */
+.hero__content{
+  position:relative;
+  z-index:2;
+  color:#fff;
+}
+
+.intro-caption .intro-title,
+.intro-caption p{
+  color:#fff; /* 인라인 color 제거해도 됨 */
+}
+
+/* 반응형 높이(선택) */
+@media (max-width: 992px){ .hero{ height:480px; } }
+@media (max-width: 576px){ .hero{ height:360px; } }
+
+.youtube-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh; /* 16:9 비율 기준 */
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%) scale(1.2); /* 1.2~1.5로 조정 */
+}
+
+body {
+  font-family: 'Pretendard Variable', Pretendard, 'Noto Sans KR',
+               'Malgun Gothic', 'Apple SD Gothic Neo', AppleGothic, sans-serif;
+}
+
+/* 네비게이션 메뉴 + 서브메뉴까지 모두 강제 적용 */
+#navigation.navigation ul li > a,
+#navigation.navigation ul li ul li > a,
+#navigation ul li > a,
+#navigation ul li ul li > a {
+  font-family: 'Pretendard Variable', Pretendard, 'Noto Sans KR',
+               'Malgun Gothic', 'Apple SD Gothic Neo', AppleGothic, sans-serif !important;
+  font-weight: 600;  /* 필요시 500~700로 조절 */
+  letter-spacing: -0.2px; /* 옵션: 한글 자간 살짝 조정 */
+}
+
+html, body {
+  font-family: 'Pretendard Variable', Pretendard, 'Noto Sans KR',
+               'Apple SD Gothic Neo', 'Malgun Gothic',
+               system-ui, -apple-system, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* 제목 계열 가중치 */
+h1, h2, h3, h4, h5, h6,
+.page-title,
+.section-title .title,
+.post-title,
+.widget-title {
+  font-family: 'Pretendard Variable', Pretendard, 'Noto Sans KR',
+               'Apple SD Gothic Neo', 'Malgun Gothic',
+               system-ui, -apple-system, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* 버튼/내비 링크도 동일 폰트 */
+.btn,
+#navigation ul li > a,
+#navigation ul li ul li > a {
+  font-family: 'Pretendard Variable', Pretendard, 'Noto Sans KR',
+               'Apple SD Gothic Neo', 'Malgun Gothic',
+               system-ui, -apple-system, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif !important;
+  font-weight: 600;
+}
+
+/* 혹시 다른 CSS가 덮어쓰면 특이성 높여 강제 */
+#navigation.navigation ul li > a,
+#navigation.navigation ul li ul li > a {
+  font-family: 'Pretendard Variable', Pretendard, 'Noto Sans KR',
+               'Apple SD Gothic Neo', 'Malgun Gothic',
+               system-ui, -apple-system, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* 옵션: 한글 자간 살짝 보정 */
+body { letter-spacing: -0.1px; }
+
+/* === 이미지 가운데 정렬 === */
+/* 본문/사이드바/포스트 이미지들을 가운데 정렬 */
+.content img,
+.content-area img,
+.post-img img,
+.widget img,
+.sidebar-area img,
+.post-holder .post-img img,
+.page-header .page-caption img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+/* 로고/푸터 로고는 기존 정렬 유지 (예외 처리) */
+.logo img,
+.footer-logo img {
+  display: inline-block;
+  margin: 0;
+}
+
+.cd-top,
+.sns-btn {
+  position: fixed;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  z-index: 999999;
+}
+.cd-top:hover,
+.sns-btn:hover { opacity: 1; }
+
+/* 위치 & 각 아이콘 이미지 */
+.btn1 { top: 210px; background-image: url('../images/btn1.png'); }
+.btn2 { top: 270px; background-image: url('../images/btn2.png'); }
+.btn3 { top: 330px; background-image: url('../images/btn3.png'); }
+.btn4 { top: 390px; background-image: url('../images/btn4.png'); }

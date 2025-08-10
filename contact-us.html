@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="도깨비 투어 - 세부 막탄 자유여행">
   <meta name="keywords" content="세부, 막탄, 자유여행, 투어, 여행사">
-  <title>도깨비 투어 | 세부 막탄점</title>
+  <title>도깨비 투어 | 세부 </title>
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -45,9 +45,17 @@
         <div class="col-md-9 col-sm-12">
           <div id="navigation" class="navigation navbar-right">
             <ul>
-              <li class="active"><a href="index.html" class="animsition-link">Home</a></li>
-              <li><a href="blog.html" class="animsition-link">Blog</a></li>
-              <li><a href="contact-us.html" class="animsition-link">Contact Us</a></li>
+                <li class="active"><a href="index.html" title="Home" class="animsition-link">Home</a></li>
+                <li><a href="company.html" title="Blog" class="animsition-link">Company</a></li>
+                <li><a href="contact-us.html" title="Blog Single" class="animsition-link">Contact</a></li>
+                <li><a href="#products" title="상품소개" class="">Product</a>
+                  <ul>
+                    <li><a href="page-sidebar.html" title="Page With Sidebar" class="animsition-link">오슬롭 고래상어</a></li>
+                    <li><a href="page-fullwidth.html" title="Page With Fullwidth" class="animsition-link">카와산 캐셔닝</a></li>
+                    <li><a href="contact-us.html" title="Contact Us" class="animsition-link">세부 호핑투어</a></li>
+                    <li><a href="contact-us.html" title="Contact Us" class="animsition-link">시티투어</a></li>
+                  </ul>
+                </li>
             </ul>
           </div>
         </div>
@@ -76,10 +84,10 @@
         <div class="contact-info outline pinside30">
           <ul class="listnone">
             <li><h3 class="contact-title">Address</h3><i class="fa fa-map-marker"></i>
-              <address>Marigondon Beach Rd<br>Marigondon, Lapu-Lapu, Cebu 6015</address>
+              <address>Marigondon Beach Rd<br> Marigondon, Lapu-Lapu<br>6015 Cebu</address>
             </li>
-            <li><h3 class="contact-title">Phone</h3><i class="fa fa-phone"></i> +63-920-123-4567</li>
-            <li><h3 class="contact-title">Email</h3><i class="fa fa-envelope-o"></i>info@dokkaebitour.com</li>
+            <li><h3 class="contact-title">Phone</h3><i class="fa fa-phone"></i>09102776173</li>
+            <li><h3 class="contact-title">Email</h3><i class="fa fa-envelope-o"></i>Dokkaebitour@gmail.com</li>
           </ul>
         </div>
       </div>
@@ -102,7 +110,7 @@
       <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
     </div>
     <div class="col-md-12 form-group">
-      <button type="submit" class="btn btn-outline">Submit</button>
+      <button type="submit" class="btn btn-outline">전송하기</button>
     </div>
   </div>
           </form>
@@ -122,43 +130,60 @@
 </div>
 
 <!-- Footer -->
-<div class="footer section-space60">
+<div class="footer section-space60"> 
+  <!-- footer -->
   <div class="container">
     <div class="row">
-      <div class="col-md-5">
-        <div class="footer-widget">
-          <div class="footer-logo mb30"><img src="images/ft-logo.png" alt=""></div>
-          <p class="small">도깨비 투어는 세부 자유여행의 새로운 기준을 제시합니다. 막탄의 아름다운 해변과 최고의 여행 경험을 제공합니다.</p>
+      <div class="col-md-5 col-sm-4">
+        <div class="footer-widget"><!-- footer-widget -->
+          <div class="footer-logo mb30">
+            <img src="images/ft-logo.png" alt="" class="">
+          </div>
+          <p class="small">도깨비 투어는 세부 자유여행의 새로운 기준을 제시하는 현지 전문 여행사입니다. 막탄의 아름다운 해변을 배경으로 여행자의 취향에 맞춘 일정과 정성 어린 서비스로 특별한 여행을 선사합니다. 한국인 운영진이 직접 운영하며, 사전 상담부터 현지 케어까지 믿고 맡길 수 있습니다.
+          </p>
         </div>
+        <!-- /.footer-widget --> 
       </div>
-      <div class="col-md-offset-1 col-md-2">
-        <div class="footer-widget">
-          <h3 class="footer-title">Quick Links</h3>
-          <ul class="listnone bullet bullet-right-angle">
-            <li><a href="#" class="footer-link">Home</a></li>
-            <li><a href="#" class="footer-link">Blog</a></li>
-            <li><a href="#" class="footer-link">Contact</a></li>
+      <div class="col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-3">
+        <div class="footer-widget"><!-- footer-widget -->
+          <h3 class="footer-title">Quick Link</h3>
+          <ul class="listnone no-padding bullet bullet-right-angle">
+            <li><a href="index.html" class="footer-link" title="Home">Home</a></li>
+            <li><a href="company.html" class="footer-link" title="Blog">Company</a></li>
+            <li><a href="contact-us.html" class="footer-link" title="Blog Detail">Contact</a></li>
+            <li><a href="contact-us.html" class="footer-link" title="Styleguide">Product</a></li>
           </ul>
         </div>
+        <!-- /.footer-widget --> 
       </div>
-      <div class="col-md-offset-1 col-md-3">
-        <div class="footer-widget">
-          <h3 class="footer-title">Get In Touch</h3>
+      <div class="col-md-offset-1 col-md-3 col-sm-offset-1 col-sm-3">
+        <div class="footer-widget"><!-- footer-widget -->
+        <h3 class="footer-title">Get In Touch</h3>
           <ul class="listnone contact">
-            <li><i class="fa fa-map-marker"></i>Marigondon Beach Rd, Cebu</li>
-            <li><i class="fa fa-phone"></i>+63-920-123-4567</li>
-            <li><i class="fa fa-envelope-o"></i>info@dokkaebitour.com</li>
+            <li><i class="fa fa-map-marker"></i>
+              <address>
+              Marigondon Beach Rd<br> Marigondon, Lapu-Lapu<br>6015 Cebu
+              
+              </address>
+            </li>
+            <li><i class="fa fa-phone"></i>09102776173</li>
+            <li><i class="fa fa-envelope-o"></i>Dokkaebitour@gmail.com</li>
           </ul>
         </div>
+        <!-- /.footer-widget --> 
       </div>
     </div>
   </div>
 </div>
 
 <!-- Tiny Footer -->
-<div class="tiny-footer">
-  <div class="container text-center">
-    Shared by <i class="fa fa-heart"></i> <a href="https://bootstrapthemes.co">BootstrapThemes</a>
+<div class="tiny-footer"><!-- tiny-footer -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+       PLAY WITH <i class="fa fa-love"></i><a href="">도깨비 투어</a>
+      </div>
+    </div>
   </div>
 </div>
 
